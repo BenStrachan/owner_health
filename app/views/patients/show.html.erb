@@ -1,7 +1,12 @@
 <%= render "patients/patientheader" %>
 
 <div class="w-container">
-<br>
+<div class="row">
+  <div class="col-md-6">
+    <div class="table-border">
+
+    <h3><%= @patient.first_name %> <%= @patient.last_name %></h3>
+    <br>
 
 <p id="notice"><%= notice %></p>
 
@@ -70,6 +75,11 @@
   <%= @patient.email %>
 </p>
 
-
-<%= link_to 'Edit', edit_patient_path(@patient) %> |
-<%= link_to 'Back', patients_path %>
+<br>
+<br>
+<%= link_to 'Edit', edit_patient_path(@patient), class: "table-link-grey" %> |
+<%= link_to 'Back', patients_path, class: "table-link-grey"%>
+</div>
+</div>
+</div>
+</div>
