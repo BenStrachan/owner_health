@@ -1,0 +1,17 @@
+<div class="navigation w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+  <div class="w-container">
+    <a class="brand-link w-nav-brand" href="index.html">
+      <div class="logo-text">Owner Health</div>
+    </a>
+    <nav class="nav-menu w-nav-menu" role="navigation">
+      <a class="nav-link w-nav-link">Appointments</a>
+      <%= link_to 'Patients', patients_path, :class=>"nav-link w-nav-link" %>
+      <a class="nav-link w-nav-link">Invoices</a>
+      <a class="nav-link w-nav-link" href="#">Payment</a>
+      <a class="nav-link w-nav-link" href="<%= edit_user_registration_path %>">Settings</a>
+    </nav>
+    <div class="menu nav-link w-nav-button">
+      <div class="w-icon-nav-menu"></div>
+    </div>
+  </div>
+</div>

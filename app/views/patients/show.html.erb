@@ -1,0 +1,75 @@
+<%= render "patients/patientheader" %>
+
+<div class="w-container">
+<br>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @patient.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @patient.last_name %>
+</p>
+
+<p>
+  <b>Street address:</b>
+  <%= @patient.street_address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @patient.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @patient.state %>
+</p>
+
+<p>
+  <b>Postocde:</b>
+  <%= @patient.postocde %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @patient.country %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @patient.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @patient.latitude %>
+</p>
+
+<p>
+  <b>Home phone:</b>
+  <%= @patient.home_phone %>
+</p>
+
+<p>
+  <b>Mobile phone:</b>
+  <%= @patient.mobile_phone %>
+</p>
+
+<p>
+  <b>Work phone:</b>
+  <%= @patient.work_phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @patient.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_patient_path(@patient) %> |
+<%= link_to 'Back', patients_path %>
