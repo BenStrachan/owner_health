@@ -9,3 +9,9 @@
  *= require table.css.scss
  *= require form.css.scss
 */
+
+.sublinks-footer {
+  text-align: right;
+  padding-right: 30px;
+  text-decoration: underline;
+}

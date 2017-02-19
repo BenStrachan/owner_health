@@ -1,3 +1,5 @@
+<% if(user_signed_in?) %>
+
 <div class="navigation w-nav" data-animation="default" data-collapse="medium" data-duration="400">
   <div class="w-container">
     <a class="brand-link w-nav-brand" href="index.html">
@@ -7,11 +9,31 @@
       <a class="nav-link w-nav-link">Appointments</a>
       <%= link_to 'Patients', patients_path, :class=>"nav-link w-nav-link" %>
       <a class="nav-link w-nav-link">Invoices</a>
-      <a class="nav-link w-nav-link" href="#">Payment</a>
-      <a class="nav-link w-nav-link" href="<%= edit_user_registration_path %>">Settings</a>
+      <%= link_to 'Settings', edit_user_registration_path, :class=>"nav-link w-nav-link" %>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete, :class=>"nav-link w-nav-link" %>
     </nav>
     <div class="menu nav-link w-nav-button">
       <div class="w-icon-nav-menu"></div>
     </div>
   </div>
 </div>
+
+<% else %>
+
+<div class="navigation w-nav" data-animation="default" data-collapse="medium" data-duration="400">
+  <div class="w-container">
+    <a class="brand-link w-nav-brand" href="index.html">
+      <div class="logo-text">Owner Health</div>
+    </a>
+    <nav class="nav-menu w-nav-menu" role="navigation">
+      <%= link_to 'Log In', user_session_path, :class=>"nav-link w-nav-link" %>
+      <%= link_to 'Sign Up', '/users/sign_up', :class=>"active nav-link w-nav-link" %>
+    </nav>
+    <div class="menu nav-link w-nav-button">
+      <div class="w-icon-nav-menu"></div>
+    </div>
+  </div>
+</div>
+
+
+<% end %>
