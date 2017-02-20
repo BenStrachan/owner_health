@@ -1,0 +1,27 @@
+<h1>Listing treatment_notes</h1>
+
+<table>
+  <tr>
+    <th>Appointment</th>
+    <th>Practitioner</th>
+    <th>Text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @treatment_notes.each do |treatment_note| %>
+  <tr>
+    <td><%= treatment_note.appointment %></td>
+    <td><%= treatment_note.practitioner %></td>
+    <td><%= treatment_note.text %></td>
+    <td><%= link_to 'Show', [treatment_note.patient, treatment_note] %></td>
+    <td><%= link_to 'Edit', edit_patient_treatment_note_path(treatment_note.patient, treatment_note) %></td>
+    <td><%= link_to 'Destroy', [treatment_note.patient, treatment_note], :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Treatment note', new_patient_treatment_note_path(params[:patient_id]) %>

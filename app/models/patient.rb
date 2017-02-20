@@ -1,4 +1,5 @@
 class Patient < ApplicationRecord
+  has_many :treatment_notes
   belongs_to :user
 
   def clean_address2
