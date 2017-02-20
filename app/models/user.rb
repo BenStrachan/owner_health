@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :availabilities
   has_many :appointment_types
   has_many :profiles
   has_many :patients

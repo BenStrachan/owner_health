@@ -1,0 +1,2 @@
+json.extract! user_availability, :id, :name, :start, :end, :max_appointment, :service_radius, :longitude, :latitude, :street_address, :city, :state, :postcode, :country, :repeat_frequency, :repeat_total, :appointment_id, :created_at, :updated_at
+json.url user_availability_url(user_availability, format: :json)

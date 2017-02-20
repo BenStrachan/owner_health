@@ -1,0 +1,31 @@
+<%= render "availabilities/availheader" %>
+
+<div class="w-container">
+<br>
+<h1>Listing availabilities</h1>
+
+<table>
+  <tr>
+    <th>Start</th>
+    <th>End</th>
+    <th>Longitude</th>
+    <th>Latitude</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @availabilities.each do |availability| %>
+  <tr>
+    <td><%= availability.start %></td>
+    <td><%= availability.end %></td>
+    <td><%= availability.longitude %></td>
+    <td><%= availability.latitude %></td>
+    <td><%= link_to 'Show', availability, :class=>"table-link-grey" %></td>
+    <td><%= link_to 'Edit', edit_availability_path(availability), :class=>"table-link-grey" %></td>
+    <td><%= link_to 'Destroy', availability, :confirm => 'Are you sure?', :method => :delete, :class=>"table-link-grey" %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br />

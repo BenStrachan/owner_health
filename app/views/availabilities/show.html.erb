@@ -1,0 +1,92 @@
+<%= render "availabilities/availheader" %>
+
+<div class="w-container">
+<div class="row">
+  <div class="col-md-6">
+    <div class="table-border">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @availability.name %>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%= @availability.start %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%= @availability.end %>
+</p>
+
+<p>
+  <b>Max appointment:</b>
+  <%= @availability.max_appointment %>
+</p>
+
+<p>
+  <b>Service radius:</b>
+  <%= @availability.service_radius %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @availability.longitude %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @availability.latitude %>
+</p>
+
+<p>
+  <b>Street address:</b>
+  <%= @availability.street_address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @availability.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @availability.state %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @availability.postcode %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @availability.country %>
+</p>
+
+<p>
+  <b>Repeat frequency:</b>
+  <%= @availability.repeat_frequency %>
+</p>
+
+<p>
+  <b>Repeat total:</b>
+  <%= @availability.repeat_total %>
+</p>
+
+<p>
+  <b>Appointment:</b>
+  <%= @availability.appointment_id %>
+</p>
+
+<br>
+<br>
+<%= link_to 'Edit', edit_availability_path(@availability), class: "table-link-grey"%> |
+<%= link_to 'Back', availabilities_path, class: "table-link-grey"%>
+</div>
+</div>
+</div>
+</div>
