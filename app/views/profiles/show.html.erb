@@ -1,0 +1,102 @@
+<%= render "profiles/profileheader" %>
+<div class="w-container">
+<div class="row">
+  <div class="col-md-6">
+    <div class="table-border">
+
+      <h3>Profile Settings</h3>
+      <br>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>First name:</b>
+  <%= @profile.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @profile.last_name %>
+</p>
+<br>
+<hr>
+<p>
+  <b>Business name:</b>
+  <%= @profile.business_name %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%= @profile.phone %>
+</p>
+
+<p>
+  <b>Mobile:</b>
+  <%= @profile.mobile %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @profile.email %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%= @profile.website %>
+</p>
+<br>
+<hr>
+<p>
+  <b>Street address:</b>
+  <%= @profile.street_address %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @profile.city %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @profile.state %>
+</p>
+
+<p>
+  <b>Postcode:</b>
+  <%= @profile.postcode %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%= @profile.country %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%= @profile.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%= @profile.longitude %>
+</p>
+<br>
+<hr>
+<p>
+  <b>Ahpra:</b>
+  <%= @profile.AHPRA %>
+</p>
+
+<p>
+  <b>Medicare:</b>
+  <%= @profile.medicare %>
+</p>
+
+<br>
+<br>
+<%= link_to 'Edit', edit_profile_path(@profile), class: "table-link-grey" %> |
+<%= link_to 'Back', profiles_path, class: "table-link-grey" %>
+</div>
+</div>
+</div>
+</div>

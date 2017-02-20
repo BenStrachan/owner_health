@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :appointment_types
+  has_many :profiles
   has_many :patients
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

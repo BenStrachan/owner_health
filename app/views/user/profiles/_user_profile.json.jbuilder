@@ -1,0 +1,2 @@
+json.extract! user_profile, :id, :first_name, :last_name, :business_name, :phone, :mobile, :email, :website, :street_address, :city, :state, :postcode, :country, :latitude, :longitude, :AHPRA, :medicare, :created_at, :updated_at
+json.url user_profile_url(user_profile, format: :json)

@@ -9,8 +9,18 @@
       <a class="nav-link w-nav-link">Appointments</a>
       <%= link_to 'Patients', patients_path, :class=>"nav-link w-nav-link" %>
       <a class="nav-link w-nav-link">Invoices</a>
-      <%= link_to 'Settings', edit_user_registration_path, :class=>"nav-link w-nav-link" %>
-      <%= link_to 'Log out', destroy_user_session_path, method: :delete, :class=>"nav-link w-nav-link" %>
+      <div class="w-dropdown" data-delay="0">
+        <div class="dropdown w-dropdown-toggle">
+          <div>Settings</div>
+          <div class="w-icon-dropdown-toggle"></div>
+        </div>
+        <nav class="w-dropdown-list">
+          <a class="w-dropdown-link" href="<%= appointment_types_path %>">Appointment Types</a>
+          <a class="w-dropdown-link" href="/profiles/1">Profile Settings</a>
+          <a class="w-dropdown-link" href="<%= edit_user_registration_path %>">User Settings</a>
+          <%= link_to 'Log out', destroy_user_session_path, method: :delete, :class=>"w-dropdown-link" %>
+        </nav>
+      </div>
     </nav>
     <div class="menu nav-link w-nav-button">
       <div class="w-icon-nav-menu"></div>

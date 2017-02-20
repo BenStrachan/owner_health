@@ -1,0 +1,34 @@
+<%= render "appointment_types/apptypehead" %>
+<div class="w-container">
+<br>
+<h1>Listing appointment_types</h1>
+<br>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Item number</th>
+    <th>Duration</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @appointment_types.each do |appointment_type| %>
+  <tr>
+    <td><%= appointment_type.name %></td>
+    <td><%= appointment_type.description %></td>
+    <td><%= appointment_type.price %></td>
+    <td><%= appointment_type.item_number %></td>
+    <td><%= appointment_type.duration %></td>
+    <td><%= link_to 'Show', appointment_type, :class=>"table-link-grey" %></td>
+    <td><%= link_to 'Edit', edit_appointment_type_path(appointment_type), :class=>"table-link-grey" %></td>
+    <td><%= link_to 'Destroy', appointment_type, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+</div>
+
+<br />

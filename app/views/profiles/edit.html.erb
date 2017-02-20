@@ -1,0 +1,15 @@
+<%= render "profiles/profileheader" %>
+<div class="w-container">
+<br>
+<h1>Editing profile</h1>
+<br>
+<div class="row">
+  <div class="col-md-6">
+<%= render 'form' %>
+</div>
+</div>
+
+<%= link_to 'Show', @profile %> |
+<%= link_to 'Back', profiles_path(@profile.user) %>
+</div>
+</div>
